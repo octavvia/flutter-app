@@ -1,6 +1,6 @@
 documentation this project: 
 
-1. add pub lib : 
+## 1. add pub lib : 
 ```
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
@@ -21,9 +21,8 @@ and pub lib for test
   mocktail: ^1.0.3
 ```
 
-2. Create Structure of Project 
-
-3. Step By Step
+## 2. Step By Step
+- create project structure
 : domain layer is independent layer:
 - open web openweather for add url and api key
 - constant file : save apiKey in constant file
