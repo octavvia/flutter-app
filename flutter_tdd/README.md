@@ -23,11 +23,13 @@ and pub lib for test
 
 ## 2. Step By Step
 - create project structure
-: domain layer is independent layer:
+
+domain layer is independent layer
+
 - open web openweather for add url and api key
 - constant file : save apiKey in constant file
-- entities.dart
-- [repositories] weather_repository.dart -> ini akan di implementasikan di data layer
+- [domain/entities] entities.dart -> independent
+- [domain/repositories] weather_repository.dart -> ini akan di implementasikan di data layer
     note: pada bagian ini akan error di failur maka diperlukan handle error 
 - [constant/error] failure.dart  -> berisi macam2 error yang kemungkinan terjadi dengan blue print failure contohnya 
 ```
@@ -43,4 +45,6 @@ class ServerFailure extends Failure {
   const ServerFailure(String message) : super(message);
 }
 ```
+
+- [domain/usecase] get_current_weather.dart -> bersifat future
 
