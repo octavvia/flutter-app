@@ -48,3 +48,22 @@ class ServerFailure extends Failure {
 
 - [domain/usecase] get_current_weather.dart -> bersifat future
 
+*** test ***
+- delete widget_test.dart on [test/widget_test.dart]
+- create layer [data, domain, presentation]
+- create file get_current_weather_test.dart on [test/domain/usecase] -> writing test code
+- create [test/helper/test_helper.dart]
+- generate mock test 
+``` 
+flutter pub run builrunner build
+```
+- run test (expetation result : ✓ should get current weather detail from the repository)
+
+
+*** data ***
+- create folder in [lib/data]: data_sources, models, and repositories.
+
+
+*** test/model ***
+- create model folder and weather_model_test.dart then code
+-
