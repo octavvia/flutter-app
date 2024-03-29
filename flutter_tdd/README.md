@@ -98,4 +98,20 @@ flutter pub run build_runner build
 - fixing main.dart using bloc state management
 
 *** page test ***
-- create 
+- create page test
+
+screenshoot: 
+
+
+| ScreenShoot 1 | ScreenShoot 2 | ScreenShoot 3 | ScreenShoot 4 |
+|---|---|---|---|
+| ![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-29 at 20 37 14](https://github.com/octavvia/flutter-app/assets/86775678/4e09fe01-70dd-46ef-a9ef-94c69e336c44) | ![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-29 at 20 37 29](https://github.com/octavvia/flutter-app/assets/86775678/ad0fb421-280e-49cb-8ef6-660d7b21d026) | ![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-29 at 20 38 10](https://github.com/octavvia/flutter-app/assets/86775678/ceb1f648-b7fd-4a1f-adc8-83b0909e2d07) | <img width="1440" alt="Screenshot 2024-03-29 at 8 39 12 PM" src="https://github.com/octavvia/flutter-app/assets/86775678/1b0b8d9b-b34f-4816-aaad-bc49eb6f46a8"> |
+
+
+
+
+
+
+
+
+
