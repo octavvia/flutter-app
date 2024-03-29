@@ -4,6 +4,8 @@ import 'package:flutter_tdd/data/models/weather_model.dart';
 import 'package:flutter_tdd/domain/entities/weather.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../helper/json_reader.dart';
+
 void main() {
   const testWeatherModel = WeatherModel(
     cityName: 'New York',

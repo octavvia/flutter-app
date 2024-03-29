@@ -55,7 +55,7 @@ class ServerFailure extends Failure {
 - create [test/helper/test_helper.dart]
 - generate mock test 
 ``` 
-flutter pub run builrunner build
+flutter pub run build_runner build
 ```
 - run test (expetation result : ✓ should get current weather detail from the repository)
 
@@ -66,4 +66,36 @@ flutter pub run builrunner build
 
 *** test/model ***
 - create model folder and weather_model_test.dart then code
--
+- create model in lib folder too
+
+*** data source ***
+- create remote_data_source_test.dart in [test/data/data_source]
+- create remote_data_source.dart in [lib/data]
+
+- create exception for error [lib/core/error]
+- create json reader in helper test [test/helper]
+
+*** repositories ***
+- create weather_repository_impl_test.dart [test/data/repositories]
+- create weather_repository_impl.dart [lib/data/repositories]
+
+
+*** presentation ***
+- create presentation layer for test -> weather_bloc_test.dart [test/presentation/bloc]
+- create bloc in lib [lib/presentation/bloc]
+    - weater_state.dart
+    - weather_event.dart
+    - weather_bloc.dart
+
+
+*** pages lib ***
+- create weather_page.dart [lib/presentation/pages]
+
+*** injection container ***
+- create injection_container.dart [lib/injection_container.dart]
+
+*** fixing main.dart ***
+- fixing main.dart using bloc state management
+
+*** page test ***
+- create 
