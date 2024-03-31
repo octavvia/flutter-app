@@ -3,38 +3,51 @@ Berikut penjelasan fungsi-fungsi file di dalam domain layer pada Clean Architect
 
 1. Entities:
 
-Berisi kelas-kelas yang merepresentasikan model data domain.
-Kelas-kelas ini bersifat immutable dan tidak memiliki logika bisnis.
+- Berisi kelas-kelas yang merepresentasikan model data domain.
+- Kelas-kelas ini bersifat immutable dan tidak memiliki logika bisnis.
+
 Contoh: kelas User untuk menyimpan informasi pengguna.
+
 2. Use Cases:
 
-Mendefinisikan kasus penggunaan dan logika bisnis aplikasi.
-Berinteraksi dengan repository untuk mengambil dan menyimpan data.
-Mengubah data menjadi model domain dan sebaliknya.
+- Mendefinisikan kasus penggunaan dan logika bisnis aplikasi.
+- Berinteraksi dengan repository untuk mengambil dan menyimpan data.
+- Mengubah data menjadi model domain dan sebaliknya.
+
 Contoh: use case GetUser untuk mengambil data pengguna dari database.
+
 3. Repositories:
 
-Mengabstraksikan akses ke sumber data eksternal (database, API, dll.).
-Menyediakan interface untuk CRUD (Create, Read, Update, Delete) data.
+- Mengabstraksikan akses ke sumber data eksternal (database, API, dll.).
+- Menyediakan interface untuk CRUD (Create, Read, Update, Delete) data.
+
 Contoh: repository UserRepository untuk mengelola data pengguna di database.
+
 4. Contracts:
 
-Mendefinisikan interface untuk use cases dan repositories.
-Memastikan decoupling antar layer dan testabilitas.
+- Mendefinisikan interface untuk use cases dan repositories.
+- Memastikan decoupling antar layer dan testabilitas.
+
 Contoh: interface UserRepositoryContract untuk mendefinisikan operasi CRUD pada data pengguna.
+
 5. Exceptions:
 
-Mendefinisikan custom exception untuk menangani error di domain layer.
-Membantu pengembang untuk melacak dan menangani error dengan lebih mudah.
+- Mendefinisikan custom exception untuk menangani error di domain layer.
+- Membantu pengembang untuk melacak dan menangani error dengan lebih mudah.
+
 Contoh: exception UserNotFoundException untuk menandakan bahwa pengguna tidak ditemukan di database.
+
 6. Value Objects:
 
-Mewakili nilai-nilai kompleks yang tidak dapat direpresentasikan dengan tipe data dasar.
-Immutable dan memiliki nilai yang unik.
+- Mewakili nilai-nilai kompleks yang tidak dapat direpresentasikan dengan tipe data dasar.
+- Immutable dan memiliki nilai yang unik.
+
 Contoh: value object Email untuk menyimpan alamat email pengguna.
+
 7. Helpers:
 
-Menyediakan fungsi-fungsi utilitas yang digunakan di seluruh domain layer.
+- Menyediakan fungsi-fungsi utilitas yang digunakan di seluruh domain layer.
+
 Contoh: fungsi parseDate untuk mengubah string menjadi objek DateTime.
 
 ```
