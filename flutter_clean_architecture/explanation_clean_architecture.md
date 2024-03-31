@@ -87,6 +87,19 @@ Penting untuk mengikuti prinsip-prinsip Clean Architecture untuk membangun aplik
 
 ### Data Layer
 
+```
+data/
+├── data_sources/
+│   ├── local/
+│   │   └── user_local_data_source.dart
+│   └── remote/
+│       └── user_api_service.dart
+├── models/
+│   └── user.dart
+└── repositories/
+    └── user_repository.dart
+```
+
 1. data_sources:
 
 - Berisi kelas-kelas konkret yang berinteraksi dengan sumber data eksternal (database, API, dll.).
@@ -122,6 +135,16 @@ UserRepository untuk mengelola data pengguna di database.
 ProductRepository untuk mengelola data produk di API.
 
 ### Presentation
+
+```
+presentation/
+├── bloc/
+│   └── user_bloc.dart
+├── pages/
+│   └── home_page.dart
+└── widgets/
+    └── user_list_item.dart
+```
 
 1. Bloc:
 
