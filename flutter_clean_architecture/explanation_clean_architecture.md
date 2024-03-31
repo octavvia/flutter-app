@@ -1,4 +1,4 @@
-*** Domain ***
+### Domain
 
 Berikut penjelasan fungsi-fungsi file di dalam domain layer pada Clean Architecture Flutter:
 
@@ -85,7 +85,7 @@ Implementasi dan struktur file dapat berbeda-beda tergantung pada proyek dan pre
 Penting untuk mengikuti prinsip-prinsip Clean Architecture untuk membangun aplikasi yang scalable, maintainable, dan testable.
 
 
-*** Data Layer ***
+### Data Layer
 
 1. data_sources:
 
@@ -121,7 +121,7 @@ UserRepository untuk mengelola data pengguna di database.
 
 ProductRepository untuk mengelola data produk di API.
 
-*** Presentation ***
+### Presentation
 
 1. Bloc:
 
