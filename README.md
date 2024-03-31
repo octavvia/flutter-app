@@ -4,4 +4,4 @@ Project ini adalah contoh aplikasi Flutter yang menerapkan pola arsitektur Clean
 |---|---|---|
 |Clean Architecture | [link Clean Architecture](https://github.com/octavvia/flutter-app/tree/main/flutter_clean_architecture) | on-finished 🔥|
 | Test Driven Development | [link Test Driven Development](https://github.com/octavvia/flutter-app/tree/main/flutter_tdd) | finish 🌤️ |
-| BLOC | [link BLOC](https://github.com/octavvia/flutter-app/tree/main/flutter_bloc)| on-progress 🌱 |
+| BLOC | [link BLOC](https://github.com/octavvia/flutter-app/tree/main/flutter_bloc)| on-finish 🌱 |
