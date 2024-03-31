@@ -1,4 +1,5 @@
 *** Domain ***
+
 Berikut penjelasan fungsi-fungsi file di dalam domain layer pada Clean Architecture Flutter:
 
 1. Entities:
@@ -82,3 +83,77 @@ Catatan:
 
 Implementasi dan struktur file dapat berbeda-beda tergantung pada proyek dan preferensi pengembang.
 Penting untuk mengikuti prinsip-prinsip Clean Architecture untuk membangun aplikasi yang scalable, maintainable, dan testable.
+
+
+*** Data Layer ***
+
+1. data_sources:
+
+- Berisi kelas-kelas konkret yang berinteraksi dengan sumber data eksternal (database, API, dll.).
+- Mengimplementasikan detail teknis untuk mengakses dan memanipulasi data.
+
+Contoh:
+
+DatabaseHelper untuk mengakses database lokal.
+
+ApiService untuk melakukan panggilan ke API.
+
+2. models:
+
+- Berisi kelas-kelas yang merepresentasikan model data domain.
+- Kelas-kelas ini bersifat immutable dan tidak memiliki logika bisnis.
+
+Contoh:
+
+User untuk menyimpan informasi pengguna.
+
+Product untuk menyimpan informasi produk.
+
+3. repository:
+
+- Mengabstraksikan akses ke sumber data dan menyediakan interface untuk CRUD (Create, Read, Update, Delete) data.
+- Berinteraksi dengan data_sources untuk mengambil dan menyimpan data.
+- Mengubah data menjadi model domain dan sebaliknya.
+
+Contoh:
+
+UserRepository untuk mengelola data pengguna di database.
+
+ProductRepository untuk mengelola data produk di API.
+
+*** Presentation ***
+
+1. Bloc:
+
+- Tanggung jawab: Mengelola state dan business logic untuk bagian tertentu dari UI.
+
+Karakteristik:
+- Bersifat immutable dan thread-safe.
+- Berkomunikasi dengan UI melalui events dan states.
+- Mengubah events menjadi states dan memperbarui UI.
+
+Contoh: 
+
+UserBloc untuk mengelola state dan business logic terkait user.
+
+2. Pages:
+
+- Tanggung jawab: Menampung struktur layout dan navigasi untuk bagian tertentu dari UI.
+
+Karakteristik:
+- Biasanya merupakan StatelessWidget atau StatefulWidget.
+- Mengatur bagaimana widgets ditampilkan dan diorganisir.
+- Menangani navigasi antar halaman.
+
+Contoh: HomePage untuk menampilkan daftar user.
+
+3. Widgets:
+
+- Tanggung jawab: Elemen UI terkecil yang dapat digunakan untuk membangun layout dan interaksi.
+
+Karakteristik:
+- Bersifat immutable dan stateless.
+- Dapat digabungkan untuk membangun UI yang kompleks.
+- Menangani interaksi pengguna dan menampilkan data.
+
+Contoh: Text, Button, ListView, dan TextField.
