@@ -1,5 +1,30 @@
 ### Domain
 
+```
+domain/
+├── entities/
+│   ├── user.dart
+│   └── ...
+├── usecases/
+│   ├── get_user.dart
+│   └── ...
+├── repositories/
+│   ├── user_repository.dart
+│   └── ...
+├── contracts/
+│   ├── user_repository_contract.dart
+│   └── ...
+├── exceptions/
+│   ├── user_not_found_exception.dart
+│   └── ...
+├── value_objects/
+│   ├── email.dart
+│   └── ...
+└── helpers/
+    └── date_utils.dart
+
+```
+
 Berikut penjelasan fungsi-fungsi file di dalam domain layer pada Clean Architecture Flutter:
 
 1. Entities:
@@ -51,30 +76,6 @@ Contoh: value object Email untuk menyimpan alamat email pengguna.
 
 Contoh: fungsi parseDate untuk mengubah string menjadi objek DateTime.
 
-```
-domain/
-├── entities/
-│   ├── user.dart
-│   └── ...
-├── usecases/
-│   ├── get_user.dart
-│   └── ...
-├── repositories/
-│   ├── user_repository.dart
-│   └── ...
-├── contracts/
-│   ├── user_repository_contract.dart
-│   └── ...
-├── exceptions/
-│   ├── user_not_found_exception.dart
-│   └── ...
-├── value_objects/
-│   ├── email.dart
-│   └── ...
-└── helpers/
-    └── date_utils.dart
-
-```
 Kesimpulan:
 
 Domain layer pada Clean Architecture Flutter bertanggung jawab untuk mendefinisikan model data, logika bisnis, dan akses ke sumber data. File-file di dalam domain layer diorganisir berdasarkan fungsinya untuk meningkatkan modularitas dan testabilitas.
