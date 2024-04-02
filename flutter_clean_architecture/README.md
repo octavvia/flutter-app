@@ -1,4 +1,4 @@
-### Domain
+## Domain
 
 ```
 domain/
@@ -86,7 +86,7 @@ Implementasi dan struktur file dapat berbeda-beda tergantung pada proyek dan pre
 Penting untuk mengikuti prinsip-prinsip Clean Architecture untuk membangun aplikasi yang scalable, maintainable, dan testable.
 
 
-### Data Layer
+## Data Layer
 
 ```
 data/
@@ -135,7 +135,7 @@ UserRepository untuk mengelola data pengguna di database.
 
 ProductRepository untuk mengelola data produk di API.
 
-### Presentation
+## Presentation
 
 ```
 presentation/
