@@ -6,6 +6,7 @@ import 'package:movie/presentation/bloc/search_movie/search_bloc.dart';
 import 'package:movie/presentation/bloc/trending_movie/trending_bloc.dart';
 import 'package:movie/presentation/bloc/trending_movie/trending_event.dart';
 import 'package:movie/presentation/pages/home.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {

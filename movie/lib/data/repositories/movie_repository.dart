@@ -1,4 +1,4 @@
-
+// ignore: depend_on_referenced_packages
 import 'package:dartz/dartz.dart';
 
 import '../../core/errors/server_failure.dart';
@@ -13,10 +13,12 @@ class MovieRepositoryImpl implements MovieRepository {
   MovieRepositoryImpl({required this.remoteDataSource});
 
   @override
-  Future<Either<ServerFailure,List<Movie>>> getPopularMovies() async {
+  Future<Either<ServerFailure, List<Movie>>> getPopularMovies() async {
     try {
-      final List<MovieModel> movieModels = await remoteDataSource.getPopularMovies();
-      final List<Movie> movies = movieModels.map((model) => model.toEntity()).toList();
+      final List<MovieModel> movieModels =
+          await remoteDataSource.getPopularMovies();
+      final List<Movie> movies =
+          movieModels.map((model) => model.toEntity()).toList();
       return Right(movies);
     } catch (e) {
       return Left(ServerFailure());
@@ -24,10 +26,12 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<ServerFailure,List<Movie>>> getTrendingMovies() async {
+  Future<Either<ServerFailure, List<Movie>>> getTrendingMovies() async {
     try {
-      final List<MovieModel> movieModels = await remoteDataSource.getTrendingMovies();
-      final List<Movie> movies = movieModels.map((model) => model.toEntity()).toList();
+      final List<MovieModel> movieModels =
+          await remoteDataSource.getTrendingMovies();
+      final List<Movie> movies =
+          movieModels.map((model) => model.toEntity()).toList();
       return Right(movies);
     } catch (e) {
       return Left(ServerFailure());
@@ -35,14 +39,15 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<ServerFailure,List<Movie>>> searchMovies(String query) async {
+  Future<Either<ServerFailure, List<Movie>>> searchMovies(String query) async {
     try {
-      final List<MovieModel> movieModels = await remoteDataSource.searchMovies(query);
-      final List<Movie> movies = movieModels.map((model) => model.toEntity()).toList();
+      final List<MovieModel> movieModels =
+          await remoteDataSource.searchMovies(query);
+      final List<Movie> movies =
+          movieModels.map((model) => model.toEntity()).toList();
       return Right(movies);
     } catch (e) {
       return Left(ServerFailure());
     }
   }
-
 }

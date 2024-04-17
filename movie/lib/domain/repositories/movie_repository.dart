@@ -1,3 +1,4 @@
+// ignore: depend_on_referenced_packages
 import 'package:dartz/dartz.dart';
 
 import '../../core/errors/server_failure.dart';

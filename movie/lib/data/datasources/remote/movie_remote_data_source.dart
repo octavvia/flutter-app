@@ -6,8 +6,7 @@ import '../../../core/errors/server_exception.dart';
 import '../../models/movie.dart';
 import '../movie_remote_data_source.dart';
 
-
-class MovieRemoteDataSourceImpl implements MovieRemoteDataSource{
+class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   final http.Client client;
 
   MovieRemoteDataSourceImpl({required this.client});
@@ -21,13 +20,13 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource{
       Uri.parse("$BASE_URL/movie/popular?api_key=$API_KEY"),
     );
 
-    if(response.statusCode == 200){
+    if (response.statusCode == 200) {
       final responseBody = json.decode(response.body);
       final List<MovieModel> movies = (responseBody['results'] as List)
-        .map((movie) => MovieModel.fromJson(movie))
-        .toList();
+          .map((movie) => MovieModel.fromJson(movie))
+          .toList();
       return movies;
-    }else{
+    } else {
       throw ServerException();
     }
   }
@@ -38,13 +37,13 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource{
       Uri.parse("$BASE_URL/trending/movie/day?api_key=$API_KEY"),
     );
 
-    if(response.statusCode == 200){
+    if (response.statusCode == 200) {
       final responseBody = json.decode(response.body);
       final List<MovieModel> movies = (responseBody['results'] as List)
           .map((movie) => MovieModel.fromJson(movie))
           .toList();
       return movies;
-    }else{
+    } else {
       throw ServerException();
     }
   }
@@ -55,15 +54,14 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource{
       Uri.parse("$BASE_URL/search/movie?query=$query&api_key=$API_KEY"),
     );
 
-    if(response.statusCode == 200){
+    if (response.statusCode == 200) {
       final responseBody = json.decode(response.body);
       final List<MovieModel> movies = (responseBody['results'] as List)
           .map((movie) => MovieModel.fromJson(movie))
           .toList();
       return movies;
-    }else{
+    } else {
       throw ServerException();
     }
   }
-
 }
