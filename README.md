@@ -1,4 +1,3 @@
-Project ini adalah contoh aplikasi Flutter yang menerapkan pola arsitektur Clean Architecture, metodologi Test-Driven Development (TDD), dan state management dengan BLoC.
 
 | nama| link| keterangan |
 |---|---|---|
