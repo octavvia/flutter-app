@@ -5,12 +5,16 @@ import '../entities/article.dart';
 
 abstract class ArticleRepository {
   // API methods
+  // Metode untuk mengambil daftar artikel dari sumber data eksternal (API). Mengembalikan Future yang berisi DataState yang berisi daftar ArticleEntity.
   Future<DataState<List<ArticleEntity>>> getNewsArticles();
 
   // Database methods
-  Future < List < ArticleEntity >> getSavedArticles();
+  // getSavedArticles(): Metode untuk mengambil daftar artikel yang tersimpan dalam database lokal. Mengembalikan Future yang berisi daftar ArticleEntity.
+  Future<List<ArticleEntity>> getSavedArticles();
 
-  Future < void > saveArticle(ArticleEntity article);
+// getSavedArticles(): Metode untuk mengambil daftar artikel yang tersimpan dalam database lokal. Mengembalikan Future yang berisi daftar ArticleEntity.
+  Future<void> saveArticle(ArticleEntity article);
 
-  Future < void > removeArticle(ArticleEntity article);
+// removeArticle(ArticleEntity article): Metode untuk menghapus artikel dari database lokal. Menerima ArticleEntity sebagai parameter dan tidak mengembalikan nilai (void).
+  Future<void> removeArticle(ArticleEntity article);
 }
