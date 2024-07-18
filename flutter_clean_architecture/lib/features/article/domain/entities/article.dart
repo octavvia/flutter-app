@@ -37,3 +37,15 @@ class ArticleEntity extends Equatable{
     ];
   }
 }
+
+// pada bagian ini biasanya dibuat sesuai dengan bentuk dari api responnya, contohnya 
+// {
+//   "id": 1,
+//   "author": "John Doe",
+//   "title": "Sample Article",
+//   "description": "This is a sample article description.",
+//   "url": "https://example.com/sample-article",
+//   "urlToImage": "https://example.com/sample-article.jpg",
+//   "publishedAt": "2024-07-18T12:34:56Z",
+//   "content": "This is the content of the sample article."
+// }

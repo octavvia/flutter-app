@@ -38,4 +38,5 @@ class LocalArticleBloc extends Bloc<LocalArticlesEvent, LocalArticlesState> {
     final articles = await _getSavedArticleUseCase();
     emit(LocalArticlesDone(articles));
   }
+   
 }
